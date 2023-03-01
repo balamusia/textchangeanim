@@ -1,0 +1,32 @@
+<h1 id="thing">hi</h1>
+
+<script>
+  
+  let txt='hi';
+  let frames=['x','y','z'];
+  let framecount = 0;
+  const thing=document.getElementById('thing');
+
+  let i = 1;                  //  set your counter to 1
+
+function myLoop() {         //  create a loop function
+  
+  setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+    console.log(frames[framecount]);   //  your code here
+    if(framecount<2){
+      framecount++;
+    }else{
+      framecount = 0;
+    }
+    // i++;                    //  increment the counter
+    // if (i < 10) {           //  if the counter < 10, call the loop function
+      myLoop();             //  ..  again which will trigger another 
+    }                       //  ..  setTimeout()
+  , 3000)
+}
+
+myLoop();                   //  start the loop
+
+
+
+</script>
