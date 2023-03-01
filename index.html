@@ -13,6 +13,7 @@ function myLoop() {         //  create a loop function
   
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     console.log(frames[framecount]);   //  your code here
+    thing.innerHTML = frames[framecount];
     if(framecount<2){
       framecount++;
     }else{
